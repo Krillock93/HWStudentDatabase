@@ -65,13 +65,14 @@ namespace HWStudentDatabase
         /// über die gesamte Schule
         /// </summary>
         /// <param name="students">Liste der Schüler</param>
+
         private static void AverageOfWholeSchool(List<Student> students)
         {
 
             decimal avgDeutsch = 0;
             decimal avgEnglisch = 0;
             decimal avgMathe = 0;
-
+            
             for (int i = 0; i < students.Count; i++)
             {
                 students[i].Grades.TryGetValue(TypeOfGrade.Deutsch, out decimal d);
